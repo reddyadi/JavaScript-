@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Casino Random</title>
+    <style>
+      .align{
+        margin: 5em;
+        border: 1px solid black;
+        width: 30em;
+        margin-left: 20em;
+        background-color: orange;
+        box-shadow: 0.5em 0.5em;
+      }
+      .align2{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="align">
+      <div class="align2">
+        <p id="result"></p>
+        <p id="tryAgain"></p>
+        <form>
+          <input id="input" type="text" name="" value="">
+        </form>
+        <button id="press">Try your luck</button>
+
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+    <script type="text/javascript">
+      // // Create a variable to hold a random number between 1 and 10
+      // var randomNum = Math.floor((Math.random() * 10) + 1);
+      //
+      // // Create a variable called el to hold the element whose id attribute has a value of info
+      // var el = document.getElementById('info');
+      // // Write the number into that element
+      // // el.innerHTML = '<h2>random number</h2><p>' + randomNum + '</p>';
+
+      // var casinoNum = {
+      //   ranNum : Math.floor((Math.random() * 10) + 1),
+      //   ranMethod: function(){
+      //     console.log(casinoNum.ranNum);
+      //   }
+      // };
+
+      // Creating a casino object and a method to call later
+      //  var casinoObj = {
+      //    randomNum: Math.floor((Math.random() * 10) + 1),
+      //    ranMethod: function() {
+      //     num = casinoObj.randomNum;
+      //     console.log(num);
+      //    }
+      //  };
+      //
+      // casinoObj.ranMethod();
+
+      //Creates a variable x to store html level data to manipulate later
+      var x = document.getElementById('result');
+      var z = document.getElementById('tryAgain');
+
+      //Click function renders casino obj data to html element x
+      $('#press').click (function(){
+        randomNum = Math.floor((Math.random() * 10) + 1);
+        var y = document.getElementById('input').value;
+        var compare = parseInt(y);
+        console.log(typeof compare);
+        x.textContent = randomNum;
+        if(randomNum === compare) {
+          tryAgain.textContent = 'You Win';
+        } else {
+          tryAgain.textContent = 'try again';
+        }
+      });
+
+    </script>
+
+  </body>
+</html>

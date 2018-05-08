@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>General Knowledge Question</title>
+    <style media="screen">
+
+      .base{
+        width: 40em;
+        height: 40em;
+        border: 1px solid black;
+        background-color: blue;
+        margin-left: 20em;
+      }
+      .shift{
+        padding-left: 7em;
+        padding-top: 4em;
+      }
+
+      p{
+        color: white;
+        font-size: 3em;
+      }
+
+      #dispAns{
+        font-size: 2em !important;
+        color: red !important;
+        margin-left: 1.6em;
+      }
+
+      #dispAns1{
+        font-size: 2em !important;
+        color: red !important;
+        margin-left: 1.6em;
+      }
+
+      .btn{
+        width: 10em;
+        height: 3em;
+        font-size: 1em;
+        margin-left: 7.25em;
+        border-radius: 0.5em;
+      }
+
+      .ansSlot{
+        margin-left: 10em;
+        height: 2.5em;
+        width: 15em;
+        border-radius: 1em;
+        padding: .25em;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="base">
+      <div class="shift">
+        <div>
+          <form>
+            1.What is the capital of Thailand?<input id="ans" class="ansSlot" type="text">
+            <br>
+            <br>
+            2.What is the capital of New Zealand?<input id="ans1" class="ansSlot" type="text">
+          </form>
+        </div>
+        <div>
+          <p id="dispAns"></p>
+        </div>
+        <div>
+          <p id="dispAns1"></p>
+        </div>
+        <button id="checkAns" class="btn">Check</button>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+    <script type="text/javascript">
+
+      //Initialises the use of jQuery when page is loaded
+      $(document).ready (function(){
+
+        var z = document.getElementById('dispAns');
+        console.dir(z);
+      //When Check button is clicked, initiate this chunk of code
+      $('#checkAns').click(function(){
+        // x stores the value that is inputed into the textbox
+        var x = document.getElementById('ans').value;
+        var y = document.getElementById('ans1').value;
+        //if statement compares the value of x alongside the values in the if statement
+        if (x === 'bangkok'){
+          dispAns.textContent = '1.Correct';
+          $('.base').css("background-color", "green");
+        } else if (x === 'Bangkok'){
+          dispAns.textContent = '1.Correct';
+          $('.base').css("background-color", "green");
+        } else if (x === 'BANGKOK'){
+          dispAns.textContent = '1.Correct';
+          $('.base').css("background-color", "green");
+        } else {
+          dispAns.textContent = '1.Try Again';
+          $('.base').css("background-color", "yellow");
+        }
+
+        //if statement compares the value of y alongside the values in the if statement
+        if (y === 'wellington') {
+          dispAns1.textContent = '2.Correct';
+        } else if (y === 'Wellington') {
+          dispAns1.textContent = '2.Correct';
+        } else if (y === 'WELLINGTON') {
+          dispAns1.textContent = '2.Correct';
+        } else {
+          dispAns1.textContent = "2.Try Again";
+        }
+
+      });
+
+    });
+
+    </script>
+
+
+  </body>
+</html>

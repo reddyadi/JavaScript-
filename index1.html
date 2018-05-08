@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript day 2 (3week streak)</title>
+  </head>
+  <body>
+
+    <ul class="list-thing" id="listThing">
+      <li class="inner">A</li>
+      <li class="inner">B</li>
+      <li class="inner">C</li>
+      <li class="inner">D</li>
+      <li class="inner">E</li>
+      <li class="inner">F</li>
+      <li class="inner">G</li>
+    </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+    <script>
+      // **** First task
+
+      // var myObj = {
+      //     aProperty: 'first property',
+      //     bProperty: 'second property',
+      //     cProperty: 'third property',
+      //     innerObjOne: {
+      //       dProperty: 'fourth property',
+      //       eProperty: 'fifth property',
+      //       fProperty: 'sixth property'
+      //     },
+      //     innerObjTwo: {
+      //       a: 1,
+      //       b: 2,
+      //       c: 3,
+      //       dArray: ['a', 'b', 'c', {
+      //         arrayProp: 'really!'
+      //       }]
+      //     },
+      //     aMethod: function (a, b) {
+      //       console.log(this);
+      //       var sum = a + b;
+      //       console.log(sum);
+      //     }
+      // };
+      //   myObj.aMethod(1,2);
+      //
+      // // var myArray = [1,2,3,4];
+      // console.log(myObj.innerObjTwo.dArray[3].arrayProp);
+
+
+      //*****Second Object Task
+
+      // var myObj = {
+      //     aProperty: 'first property',
+      //     bProperty: 'second property',
+      //     cProperty: 'third property',
+      //     innerObjOne: {
+      //       dProperty: 'fourth property',
+      //       eProperty: 'fifth property',
+      //       fProperty: 'sixth property'
+      //     },
+      //     innerObjTwo: {
+      //       a: 1,
+      //       b: 2,
+      //       c: 3,
+      //       dArray: ['a', 'b', 'c', {
+      //         arrayProp: 'really buddy!'
+      //       }]
+      //     },
+      //     aMethod: function () {
+      //       alert(myObj.innerObjTwo.dArray[3].arrayProp);
+      //     }
+      //   };
+      //
+      //   function eight (){
+      //     myObj.aMethod();
+      //   }
+      //
+      //   setTimeout(eight, 2000);
+
+        // setTimeout(myObj.aMethod,8000);
+
+        //Access List Items -- Task 3
+
+        // var getList = document.getElementsByClassName('inner');
+        // console.dir(getList[3].innerText);
+
+        var $getItAllWithjQuery = $('.inner');
+        console.log($getItAllWithjQuery);
+
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript (8/5/18)</title>
+    <style media="screen">
+
+      body, html{
+        font-size: 16px;
+        background-color: pink;
+        height: 100vh;
+      }
+
+      li {
+        font-size: 2em;
+      }
+
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li id="one">1</li>
+      <li id="two">2</li>
+      <li id="three">3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+    </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+    <script type="text/javascript">
+
+      //this function take 2 parameters that change the color
+      //and refernce the id of the element
+      function changeColor (color, id) {
+        var el = document.getElementById(id);
+        el.style.color = color;
+        setTimeout(function(){
+          $('#'+id).hide(1000).show(2000).hide(2000).show(2000);
+        }, 2000)
+    };
+
+    changeColor('green', 'two');
+    changeColor('red', 'three');
+    changeColor('yellow', 'one');
+
+      // //1. function expression
+      // var aFunctionThing = function () {
+      //   // alert('boom');
+      // }(); //Allows for calling straight after function is written with '()'
+      //
+      // //2. function declaration
+      // function anotherFunction () {
+      //
+      // };
+      //
+      // //Parameters
+      // function getArea(width,height) {
+      //   return width * height;
+      // };
+      // //Arguments
+      // getArea(2,2);
+      //
+      // var x = 20;
+      // var y = 50;
+      //
+      // getArea(x,y);
+      //
+      // function timesTen (number) {
+      //   return number * 10;
+      // };
+      //
+      // console.log(timesTen(getArea(50, 1000)));
+      //
+      // //3. Object functions
+      // var myMethods = {
+      //   firstMethodTimesTen : function (number) {
+      //     return number * 10;
+      //   },
+      //   secondMethodTimesTwenty : function (number) {
+      //     return number * 20;
+      //   }
+      // };
+      //
+      // var result = myMethods.secondMethodTimesTwenty(5);
+      // console.log(result);
+      
+    </script>
+
+  </body>
+</html>

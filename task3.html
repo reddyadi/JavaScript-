@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript thing</title>
+  </head>
+  <body>
+    <p id="render">Color</p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+    <script type="text/javascript">
+
+      console.log('working');
+
+      var testObj = {
+        property1: 4,
+        property2: 5,
+        property3: 6,
+        objMethod: function(){
+          total = testObj.property1 + testObj.property2 + testObj.property3;
+          console.log(total);
+        }
+      };
+      testObj.objMethod();
+
+      var x = document.getElementById('render');
+      console.dir(x);
+      x.style.color = 'purple';
+      x.textContent = total;
+    </script>
+  </body>
+</html>

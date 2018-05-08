@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript (7/05/18)</title>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+    <form class="" action="index.html" method="post">
+      Type Something: <input type="text" name="fname" id="anInput">
+      <button id="trigger" type="button" style="margin-top: 2.5em">Trigger</button>
+    </form>
+
+    <p id="input">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <script type="text/javascript">
+
+      // A basic function declaration
+      function aBasicFunctionDeclaration() {
+        alert('I am a function declaration');
+      };
+
+      //Here we are invoking a function
+      //aBasicFunctionDeclaration();
+
+      //a Function expression
+      var aFunctionExpression = function () {
+        alert('This is a function expression');
+      }();
+
+      // aFunctionExpression();
+
+      $('#trigger').click(function(){
+      var x = parseInt (document.getElementById('anInput').value);
+      console.log(typeof x);
+    });
+
+
+
+
+
+
+      //When the page loads
+      // $(document).ready(function(){
+      // //Do this stuff
+      //
+      //   var storageArray = [];
+      //
+      //   $('#trigger').click(function(){
+      //
+      //     //Private variable since inside a function
+      //     var getValue = document.getElementById('anInput').value;
+      //
+      //     if(getValue === 'remove') {
+      //       storageArray.pop();
+      //       alert('element is removed');
+      //     } else {
+      //       storageArray.push(getValue);
+      //     }
+      //     console.log(storageArray);
+      //
+      //     //Converting string to a number value
+      //     var getNumber = parseInt(getValue);
+
+          //Here we use typeof to find the type of value the variable is registered as
+
+          // console.log(typeof getNumber);
+
+           // if (getValue == 'something') {
+           //   alert('hello');
+           // } else {
+           //   alert('goodbye');
+           // }
+
+
+          //truthy falsey check
+          //  var trueVal = true;
+          //  var falseVal = false;
+          //
+          //  if (getValue) {
+          //    //do this
+          //   console.log('its true');
+          // } else {
+          //   console.log('its false');
+          // }
+        //}); //Click function ends here
+
+      //});
+    </script>
+
+
+  </body>
+  <script type="text/javascript">
+
+    // function Hotel (name, rooms) {
+    //   this.name = name;
+    //   this.rooms = rooms;
+    // }
+    //
+    // var hotel1 = new Hotel ('Quay', 40);
+    // var hotel2 = new Hotel ('Park', 120);
+    //
+    // // console.log(hotel1);
+    // // console.log(hotel2);
+    //
+    // var a = 'a string';
+    // var b = 54545454;
+    //
+    // var myArray = [22,15];
+    //
+    // var person = {
+    //   firstName: 'John'
+    // };
+    //
+    // var torf = false;
+    //
+    // person.age = 22;
+    // person.lastname = 'Smith';
+    //
+    // delete person.firstName;
+    //
+    // console.log(typeof b);
+    //
+    var fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+    fruits.push('Kiwi');
+    fruits.push('Peach');
+    fruits.pop();
+    fruits.pop();
+    console.log(fruits);
+
+  </script>
+</html>

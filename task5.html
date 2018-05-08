@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Array Play Around</title>
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+      Add to array: <input id="input" type="text" name="" value="">
+      <button id="addBtn" type="button" name="button">Add</button>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready (function(){
+        console.log('working');
+        //defines an empty array for storage
+        var inputArray = [];
+        //intiates button click to perform functions
+        $('#addBtn').click(function(){
+          //variable z finds the value of input once button is clicked
+          var z = document.getElementById('input').value;
+          //intiates if statement to add or remove items to and from the inputArray
+          if (z === "remove") {
+            inputArray.pop();
+          } else {
+            inputArray.push(z);
+          }
+          console.log(inputArray);
+
+        });
+
+
+      });
+
+    </script>
+
+  </body>
+</html>

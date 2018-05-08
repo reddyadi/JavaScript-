@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="cost"></p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+    <script>
+
+      //Create three variables to store the information needed
+      // var price;
+      // var quantity;
+      // var total;
+      //
+      // //Assign values to the price and quantity variables.
+      // price = 5;
+      // quantity = 14;
+      // //Calculate the total by multiplying the price by quantity.
+      // total = price * quantity;
+      //
+      // //Get the element with an id of cost.
+      // var el = document.getElementById('cost');
+      // el.textContent = '$' + total;
+
+      //Building object and function
+      var totObj = {
+          price: 5,
+          quantity: 14,
+          totMethod: function(){
+            total = totObj.price * totObj.quantity;
+              console.log(total);
+            var el = document.getElementById('cost');
+            el.textContent = '$' + total;
+          }
+      };
+      totObj.totMethod();
+
+    // $(document).ready(function(){
+    //   console.log('working');
+    //   $('#click').click(function(){
+    //     console.log(totalCost());
+    //   });
+    //   function totalCost (){
+    //     return(total);
+    //   }
+    // });
+
+    </script>
+
+  </body>
+</html>
