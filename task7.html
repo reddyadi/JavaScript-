@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>iife task</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+
+    (function(){
+
+        //declaring a global variable a
+        var a = 4;
+        var d = print();
+
+        //decalring a function that computes the global and private variable
+        function print() {
+          //declaring a private variable b
+          var b = 5;
+          return a * b;
+        };
+
+        console.log(d);
+
+        //decalring a function that computes the global and private varibale
+        function print2() {
+          //decalring a private variable c
+          var c = 7;
+          return c * a;
+        };
+
+        console.log(print2());
+
+    })();
+
+  </script>
+</html>

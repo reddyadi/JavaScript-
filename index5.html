@@ -2,13 +2,37 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>JavaScript (9/5/18)</title>
+    <title>IIFE(Immediately invoked function expression)</title>
   </head>
   <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
-    <script type="text/javascript">
-
-    </script>
 
   </body>
+
+  <script type="text/javascript">
+
+      //This is an immediately invoked
+      //Function expressions
+      (function(){
+          // Vars are placed at the top
+          // of the script
+          var a = 'something';
+          var b = 'nothing';
+
+          //A basic function declaration
+          function shout() {
+            alert(a);
+          }
+
+          //Another function declaration
+          function shoutAgain() {
+            alert(b);
+          }
+
+          //Here we are invoking both functions
+          shout();
+          shoutAgain();
+
+      })();//iife ENDS
+
+  </script>
 </html>

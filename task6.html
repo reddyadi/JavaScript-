@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Function Practice</title>
+    <style media="screen">
+      body{
+        padding: 5em;
+        margin-left: 20em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calculate volume of a cude or cuboid</h1>
+    <div>
+      <form class="" action="index.html" method="post">
+        <div>enter lenght: <input type="text" name="" value="" id="length"></div>
+        <br>
+        <div>enter height: <input type="text" name="" value="" id="height"></div>
+        <br>
+        <div>enter base: <input type="text" name="" value="" id="base"></div>
+        <br>
+        <div><button type="button" name="button" id="calc">Calculate</button></div>
+      </form>
+      <div class="">
+        <p id="output"></p>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        console.log('working');
+        $('#calc').click(function(){
+          var x = parseInt(document.getElementById('length').value);
+          console.log(x);
+          var y = parseInt(document.getElementById('height').value);
+          console.log(y);
+          var z = parseInt(document.getElementById('base').value);
+          console.log(z);
+
+          var volume = x * y * z;
+          console.log(volume);
+          output.innerText = volume;
+          console.dir(output);
+
+        });
+
+
+      });
+    </script>
+
+  </body>
+</html>
