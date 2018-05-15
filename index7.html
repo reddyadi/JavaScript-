@@ -26,31 +26,34 @@
 	<iframe src="https://giphy.com/embed/Wg6sfwn9f0sJq" width="427" height="480" frameBorder="0" class="giphy-embed answer" allowFullScreen></iframe>
 	<h4 class="a-class"></h4>
 	<script>
-  
+
 		(function(){
-			// Code here
-      var a = document.querySelector('p.a-class');
-      var b = document.getElementsByClassName('question')[0];
-      var c = document.getElementsByTagName('h1')[0];
-      console.dir(b);
-      console.dir(c);
 
-      function changeSize () {
-        a.style.fontSize = '40px';
-      };
-      changeSize();
+				// Code here
+	      var a = document.querySelector('p.a-class');
+	      var b = document.getElementsByClassName('question')[0];
+	      var c = document.getElementsByTagName('h1')[0];
+				var d = document.getElementsByClassName('a-class')[3];
+	      console.dir(b);
+	      console.dir(c);
 
-      function changeColor () {
-        b.style.color = 'green';
-        b.style.fontSize = '30px';
-      }
-      changeColor();
+	      function changeSize () {
+	        a.style.fontSize = '40px';
+					b.style.fontSize = '30px';
+					c.style.fontSize = '50px';
+	      };
+	      changeSize();
 
-      function changeText () {
-        c.style.fontSize = '50px';
-        c.style.color = 'blue';
-      }
-      changeText();
+	      function changeColor () {
+	        b.style.color = 'green';
+					c.style.color = 'blue';
+	      }
+	      changeColor();
+
+	      function changeText () {
+					d.textContent = "Four";
+	      }
+	      changeText();
 
 		})();
 	</script>
