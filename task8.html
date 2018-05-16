@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .some-class{
+        color: blue !important;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h4>Fun times</h4>
+
+  </body>
+  <script type="text/javascript">
+
+    // *Making an Element with js:*
+
+  			// Get the element you want to add your new element before or after
+  			var gimmeH4 = document.querySelector('h4');
+
+  			// Create the new element
+  			// This can be any valid HTML element: p, article, span, etc...
+  			var p = document.createElement('p');
+        var h = document.createElement('h1');
+
+  			// Add content to the new element
+  			p.innerText = 'This is brand new and made with js!';
+        h.innerText = 'This is a H1 header created using javascript only';
+
+  			// Insert the new node before the reference node
+  			gimmeH4.after(p);
+        p.after(h);
+
+        console.log(h);
+
+  			// p.style.color = 'green';
+  			// p.style.fontSize = '90px';
+        //Attributes for p tag
+  			p.setAttribute('id', 'idName');
+  			p.setAttribute('class', 'some-class')
+  			p.setAttribute('style', 'font-size: 44px; font-style: italic; color: pink;')
+
+        //attributes for h1 tag
+        h.setAttribute('id', 'idH1');
+        h.setAttribute('class', 'h1-class');
+        h.setAttribute('style', 'font-size: 2em; font-style: italic; color: pink');
+
+  </script>
+</html>
